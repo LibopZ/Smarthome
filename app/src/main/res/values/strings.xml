@@ -11,5 +11,6 @@
     <string name="product_price">Price</string>
     <string name="product_volume">Volume</string>
     <string name="product_units">Units</string>
-    
+    <string name="add_comparelist">Add to Compare Lisst</string>
+
 </resources>

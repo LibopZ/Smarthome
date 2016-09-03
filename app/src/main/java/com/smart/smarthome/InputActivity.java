@@ -3,6 +3,8 @@ package com.smart.smarthome;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
+import android.text.Editable;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -12,9 +14,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class InputActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private Toolbar toolbar;
+    private EditText inputProduct, inputPrice, inputVolume, inputUnits;
+    private TextInputLayout inputLayoutProduct, inputLayoutPrice, inputLayoutVolume, inputLayoutUnits;
+    private Button btnAddCompare;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +32,24 @@ public class InputActivity extends AppCompatActivity
         setContentView(R.layout.activity_input);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        inputLayoutProduct = (TextInputLayout) findViewById(R.id.input_layout_product_name);
+        inputLayoutPrice = (TextInputLayout) findViewById(R.id.input_layout_product_price);
+        inputLayoutVolume = (TextInputLayout) findViewById(R.id.input_layout_product_volume);
+        inputLayoutUnits = (TextInputLayout) findViewById(R.id.input_layout_product_units);
+        inputProduct = (EditText) findViewById(R.id.input_product);
+        inputPrice = (EditText) findViewById(R.id.input_price);
+        inputVolume = (EditText) findViewById(R.id.input_volume);
+        inputUnits = (EditText) findViewById(R.id.input_units);
+        btnAddCompare = (Button) findViewById(R.id.btn_addCompare);
+
+
+
+
+
 
         /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
